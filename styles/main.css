@@ -17,41 +17,110 @@
 
 header {
     background-color: transparent;
-    position:fixed;
     z-index: 99;
 }
 
 .navigation{
-    display: block;
-    padding: 5px;
+    display: flex;
     text-align: center;
 }
 
-.logo-menu {
+.logo-menu-tisno{
+    position: relative;
+    top:10px;
+    /* left:17px; */ 
     height: 28px;
-    width: 240px;
-    padding: 15px;
+    width: 105px;
+    animation: titleAnimation 0.5s; 
+    z-index:99;
+
+}
+
+.logo-menu-resort-big{
+    position: relative;
+    top:10px;
+    left:5px;
+    height: 28px;
+    width: 135px;
+    animation: titleAnimation 0.5s;
+    z-index:99;
+    /* -webkit-transition: all 3s;
+    transition: all 3s; */
+    /* padding-bottom: 1.4px;
+    padding-left: 3px;
+    padding-top: 18px; */
+}
+
+.logo-menu-resort-small{
+    position: relative;
+    width: 100px;
+    height:20px;
+    top: 5px;
+    left: 3px; 
+    animation: titleAnimation 0.5s;
+    display: none;
+    z-index: 99;
+
 }
 
 .menu{
     display: flex;
     flex-direction: row;
-    align-items: center; 
-    justify-content: center;
+    /* align-items: center;  */
+    justify-content: left;
     font-size: 20px;
     letter-spacing: .02em;
-    text-align: center;
+    text-align: start;
+    align-content: flex-start;
     padding: 10px;
+    margin: 10px;
     line-height: 25px;
-    border-radius:4px;
+    /* border-radius:4px; */
+    color:black;
+    z-index: 99;
 }
-
+a.link.img{
+    display: inline;
+}
 .menu-item{
     padding:25px;
-    color: rgb(109, 109, 109);
+    color: rgb(104, 101, 101);
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     display: none;
+    opacity: 0;
+    z-index: 99;
+    /* animation: titleAnimation 1s ease-in;   */
+}
+
+ /* .menu-item.contact{
+    position:fixed;
+    right:120px;
+}
+
+.logo-menu-booking{
+    position: fixed;
+    width: 100px;
+    height:50px;
+    top: 32px;
+    right: 32px;
+    animation: titleAnimation 0.5s;
+    display: inline-flex;
+    z-index: 99;
+} */
+.background{
+    z-index: 2;
+    background-color: white;
+    opacity: 1;
+    position: absolute;
+    top:17px;
+    left:12px;
+    height: 75px;
+    width: 1525px;
+    border-radius:1px;
+    display: none;
+    opacity: 95%;
+
 }
 
 .main-image{
@@ -86,13 +155,13 @@ header {
       background-repeat: no-repeat;
       opacity: 0;
       z-index: 1;
-      animation: imageAnimation 30s linear infinite 0s; 
+      animation: imageAnimation 30s linear infinite 0s;
   }
   
   
   
   .slideshow li:nth-child(1) span { 
-      background-image: url('../images/main-image-1.jpg');
+      background-image: url('../images/main-image-1.jpeg');
   }
   .slideshow li:nth-child(2) span { 
     background-image: url('../images/main-image-2.jpeg');
@@ -117,29 +186,54 @@ header {
   
   
   
-  @keyframes imageAnimation { 
-      0% { opacity: 0; animation-timing-function: ease-in; }
-      8% { opacity: 1; animation-timing-function: ease-out; }
-      17% { opacity: 1 }
-      25% { opacity: 0 }
-      100% { opacity: 0 }
-  }
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
   
   
-  @keyframes titleAnimation { 
-      0% { opacity: 0 }
-      8% { opacity: 1 }
-      17% { opacity: 1 }
-      19% { opacity: 0 }
-      100% { opacity: 0 }
-  }
+@keyframes titleAnimation { 
+    from { opacity: 0  }
+    to {opacity: 1; animation-timing-function: ease-in;}
+    /* 8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 } */
+}
+
+@keyframes titleAnimation2{
+    0% {opacity: 1}
+    100% {opacity: 0; animation-timing-function: ease-out;}
+}
   
-  
-  .no-cssanimations .cb-slideshow li span {
+.no-cssanimations .cb-slideshow li span {
       opacity: 1;
   }
 
 div.menu > a:hover{
     color:black;
+    font-weight:bold;
 }
 
+.nav-active{
+    animation: transform 3s;
+}
+
+/* div.menu > a:nth-child(4){
+    animation-delay: 3s;
+}
+
+div.menu > a:nth-child(5){
+    animation-delay: 3.2s;
+}
+
+div.menu > a:nth-child(6){
+    animation-delay: 3.4s;
+}
+
+div.menu > a:nth-child(7){
+    animation-delay: 3.6s;
+} */
