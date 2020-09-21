@@ -68,9 +68,11 @@ header {
     flex-direction: row;
     /* align-items: center;  */
     justify-content: left;
-    font-size: 20px;
+    font-size: 17px;
+    font-weight: bold;
     letter-spacing: .02em;
     text-align: start;
+    text-transform: uppercase;
     align-content: flex-start;
     padding: 10px;
     margin: 10px;
@@ -215,7 +217,7 @@ a.link.img{
 
 div.menu > a:hover{
     color:black;
-    font-weight:bold;
+    font-weight:bolder;
 }
 
 .nav-active{

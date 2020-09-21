@@ -19,7 +19,7 @@ $(function(){
                 // ${index/5+0.3}s `;
             });
             bk.forEach((pic,index)=>{
-                pic.style.filter = "brightness(50%)";
+                pic.style.filter = "brightness(60%)";
             })
         });
         
